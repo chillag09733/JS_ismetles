@@ -3,6 +3,8 @@ import { kutyaLista } from "./adatok.js";
 import Kartya from "./Kartya.js";
 import Kartyak from "./Kartyak.js";
 
+const kivalasztottLista = []
+
 let nev = "Dézi";
 const cim = "Kutyák minden mennyiségben";
 //objektum, kulcs-érték párok
@@ -35,6 +37,7 @@ cimKiiras(cim);
 // egyKutyaKiiras(kutya2)
 
 const divElem = $(".tartalom");
+const kivElem = $(".kivalasztottak");
 //összes kutya kiírása
 // kutyaLista.forEach((kutya, index) => {
 //   console.log(kutya, index);
@@ -47,3 +50,19 @@ const divElem = $(".tartalom");
 // }
 
 new Kartyak(kutyaLista, divElem)
+
+//melyik kártyára kattintottunk? adatokat együk bele a kiválasztott listába
+// privát adattage lérése osztályban
+// 1. getter és meg kell hívni
+//probléma, hogy ezt a getter akkor kéne meghívni, ha rákattintanak a gombra
+//feliratkozunk a saját eseményünkre
+
+$(window).on("kivalaszt", (event) => {
+  console.log(event.detail)
+  kivalasztottLista.push(event.detail)
+  console.log(kivalasztottLista)
+  new Kartyak(kivalasztottLista, kivElem)
+})
+
+
+

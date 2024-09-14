@@ -14,6 +14,9 @@ export default class Kartya {
   #esemenyKezelo() {
     this.gombElem.on("click", (event) => {
       console.log(this); //html elem ami kiváltja az eseményt, kiirja példányosításkor létrejött objektumokat
+      //létrehozunk egy saját eseményt
+      const e = new CustomEvent("kivalaszt", { detail: this.#kutya });
+      window.dispatchEvent(e);
     });
   }
 
