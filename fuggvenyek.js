@@ -27,13 +27,13 @@ export function cimKiiras(cim) {
 //     artElem.append(divElem)
 //   }
 
-export function egyKutyaKiiras(kutya) {
-  const divElem = $(".tartalom");
-  divElem.append(`<div class = "col-lg-4 col-md-6 card">
-    <h3> ${kutya.nev} </h3>
-    <p> ${kutya.kor} </p>
-    <p> ${kutya.nem} </p>
-    <button class = "kivalaszt btn btn-outline-success">Kiválaszt</button>
-</div>`);
-}
+// export function egyKutyaKiiras(kutya) {
+//   const divElem = $(".tartalom");
+//   divElem.append(`<div class = "col-lg-4 col-md-6 card">
+//     <h3> ${kutya.nev} </h3>
+//     <p> ${kutya.kor} </p>
+//     <p> ${kutya.nem} </p>
+//     <button class = "kivalaszt btn btn-outline-success">Kiválaszt</button>
+// </div>`);
+// }
 
